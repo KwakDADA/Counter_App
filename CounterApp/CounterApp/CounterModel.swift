@@ -8,13 +8,9 @@
 import Foundation
 
 struct Counter {
-    var value: Int
-    private let minValue: Int = -10
-    private let maxValue: Int = 10
-    
-    init(value: Int = 0) {
-        self.value = value
-    }
+    var value: Int = 0
+    let minValue: Int = -10
+    let maxValue: Int = 10
     
     mutating func increase() {
         self.value = min(maxValue, value + 1)

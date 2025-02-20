@@ -72,4 +72,8 @@ final class CounterView: UIView {
     func updateCountLabel(with value: Int) {
         countLabel.text = "\(value)"
     }
+    
+    func validateButton(button: UIButton, _ valid: Bool) {
+        button.isEnabled = valid
+    }
 }
