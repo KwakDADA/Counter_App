@@ -30,9 +30,9 @@ final class CounterViewController: UIViewController {
     }
     
     private func setAction() {
-        counterView.upButton.addTarget(self, action: #selector(increaseCounter), for: .touchUpInside)
-        counterView.downButton.addTarget(self, action: #selector(decreaseCounter), for: .touchUpInside)
-        counterView.resetButton.addTarget(self, action: #selector(resetCounter), for: .touchUpInside)
+        counterView.upButton.addTarget(self, action: #selector(didTapUpButton), for: .touchUpInside)
+        counterView.downButton.addTarget(self, action: #selector(didTapDownButton), for: .touchUpInside)
+        counterView.resetButton.addTarget(self, action: #selector(didTapResetButton), for: .touchUpInside)
     }
     
     private func updateUI() {
@@ -41,17 +41,17 @@ final class CounterViewController: UIViewController {
         counterView.validateButton(button: counterView.downButton, counter.value > counter.minValue)
     }
     
-    @objc func increaseCounter() {
+    @objc func didTapUpButton() {
         counter.increase()
         updateUI()
     }
     
-    @objc func decreaseCounter() {
+    @objc func didTapDownButton() {
         counter.decrease()
         updateUI()
     }
     
-    @objc func resetCounter() {
+    @objc func didTapResetButton() {
         counter.reset()
         updateUI()
     }
