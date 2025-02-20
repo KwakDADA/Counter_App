@@ -26,7 +26,7 @@ final class CounterViewController: UIViewController {
 
     private func setUI() {
         view.backgroundColor = .white
-        counterView.updateCountLabel(with: counter.value)
+        updateUI()
     }
     
     private func setAction() {
@@ -35,23 +35,25 @@ final class CounterViewController: UIViewController {
         counterView.resetButton.addTarget(self, action: #selector(resetCounter), for: .touchUpInside)
     }
     
-    @objc func increaseCounter() {
-        counter.increase()
+    private func updateUI() {
         counterView.updateCountLabel(with: counter.value)
         counterView.validateButton(button: counterView.upButton, counter.value < counter.maxValue)
+        counterView.validateButton(button: counterView.downButton, counter.value > counter.minValue)
+    }
+    
+    @objc func increaseCounter() {
+        counter.increase()
+        updateUI()
     }
     
     @objc func decreaseCounter() {
         counter.decrease()
-        counterView.updateCountLabel(with: counter.value)
-        counterView.validateButton(button: counterView.downButton, counter.value > counter.minValue)
+        updateUI()
     }
     
     @objc func resetCounter() {
         counter.reset()
-        counterView.updateCountLabel(with: counter.value)
-        counterView.validateButton(button: counterView.upButton, true)
-        counterView.validateButton(button: counterView.downButton, true)
+        updateUI()
     }
 }
 
