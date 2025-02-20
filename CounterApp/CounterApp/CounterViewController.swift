@@ -31,10 +31,22 @@ final class CounterViewController: UIViewController {
     
     private func setAction() {
         counterView.upButton.addTarget(self, action: #selector(increaseCounter), for: .touchUpInside)
+        counterView.downButton.addTarget(self, action: #selector(decreaseCounter), for: .touchUpInside)
+        counterView.resetButton.addTarget(self, action: #selector(resetCounter), for: .touchUpInside)
     }
     
     @objc func increaseCounter() {
         counter.value += 1
+        counterView.updateCountLabel(with: counter.value)
+    }
+    
+    @objc func decreaseCounter() {
+        counter.value -= 1
+        counterView.updateCountLabel(with: counter.value)
+    }
+    
+    @objc func resetCounter() {
+        counter.value = 0
         counterView.updateCountLabel(with: counter.value)
     }
 }
