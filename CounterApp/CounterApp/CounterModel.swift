@@ -10,3 +10,9 @@ import Foundation
 struct Counter {
     var value: Int
 }
+
+enum CounterButtonTitle {
+    static let up = "🔺"
+    static let down = "🔻"
+    static let reset = "🔄"
+}
