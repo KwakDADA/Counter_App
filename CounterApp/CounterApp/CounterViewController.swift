@@ -9,7 +9,7 @@ import UIKit
 
 final class CounterViewController: UIViewController {
     
-    private var counter: Counter = .init(value: 0)
+    private var counter: Counter = .init()
     
     private let counterView = CounterView()
     
@@ -21,11 +21,21 @@ final class CounterViewController: UIViewController {
         super.viewDidLoad()
         
         setUI()
+        setAction()
     }
 
     private func setUI() {
         view.backgroundColor = .white
-        counterView.countLabel.text = "\(counter.value)"
+        counterView.updateCountLabel(with: counter.value)
+    }
+    
+    private func setAction() {
+        counterView.upButton.addTarget(self, action: #selector(increaseCounter), for: .touchUpInside)
+    }
+    
+    @objc func increaseCounter() {
+        counter.value += 1
+        counterView.updateCountLabel(with: counter.value)
     }
 }
 

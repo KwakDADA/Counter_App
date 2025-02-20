@@ -9,7 +9,7 @@ import UIKit
 
 final class CounterView: UIView {
     
-    let countLabel: UILabel = {
+    private let countLabel: UILabel = {
         let label = UILabel()
         label.font = .preferredFont(forTextStyle: .title1)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -67,5 +67,9 @@ final class CounterView: UIView {
             buttonStackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20),
             buttonStackView.heightAnchor.constraint(equalToConstant: 60)
         ])
+    }
+    
+    func updateCountLabel(with value: Int) {
+        countLabel.text = "\(value)"
     }
 }
