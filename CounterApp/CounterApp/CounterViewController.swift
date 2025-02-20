@@ -36,17 +36,17 @@ final class CounterViewController: UIViewController {
     }
     
     @objc func increaseCounter() {
-        counter.value += 1
+        counter.increase()
         counterView.updateCountLabel(with: counter.value)
     }
     
     @objc func decreaseCounter() {
-        counter.value -= 1
+        counter.decrease()
         counterView.updateCountLabel(with: counter.value)
     }
     
     @objc func resetCounter() {
-        counter.value = 0
+        counter.reset()
         counterView.updateCountLabel(with: counter.value)
     }
 }
