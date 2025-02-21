@@ -8,29 +8,53 @@
 import XCTest
 @testable import CounterApp
 
-final class CounterAppTests: XCTestCase {
+final class CounterViewControllerTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        var counter: Counter!
+    
+    override func setUp() {
+        super.setUp()
+        // 각 테스트가 실행되기 전에 새 인스턴스 생성
+        counter = Counter()
     }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    override func tearDown() {
+        // 테스트가 끝난 후 인스턴스 해제
+        counter = nil
+        super.tearDown()
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testInitialValue() {
+        XCTAssertEqual(counter.value, 0, "Counter의 초기 값은 0이어야 합니다.")
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testIncreaseDoesNotExceedMax() {
+        counter.increase()
+        XCTAssertEqual(counter.value, 1, "increase() 호출 후, value는 1이어야 합니다.")
+        
+        for _ in 1...20 {
+            counter.increase()
         }
+        XCTAssertEqual(counter.value, 10, "Counter는 최대값 10을 넘지 않아야 합니다.")
     }
-
+    
+    func testDecreaseDoesNotGoBelowMin() {
+        counter.increase()  // 값을 1로 설정
+        counter.decrease()
+        XCTAssertEqual(counter.value, 0, "decrease() 호출 후, value는 0이어야 합니다.")
+        
+        for _ in 1...20 {
+            counter.decrease()
+        }
+        XCTAssertEqual(counter.value, -10, "Counter는 최소값 -10보다 낮아지면 안됩니다.")
+    }
+    
+    func testResetSetsValueToZero() {
+        counter.increase()
+        counter.increase()
+        XCTAssertNotEqual(counter.value, 0, "증가 후 value는 0이 아니어야 합니다.")
+        
+        counter.reset()
+        XCTAssertEqual(counter.value, 0, "reset() 호출 후, value는 0이어야 합니다.")
+    }
 }

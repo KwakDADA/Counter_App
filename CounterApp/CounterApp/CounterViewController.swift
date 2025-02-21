@@ -9,7 +9,7 @@ import UIKit
 
 final class CounterViewController: UIViewController {
     
-    private var counter: Counter = .init()
+    var counter: Counter = .init()
     
     private let counterView = CounterView()
     
