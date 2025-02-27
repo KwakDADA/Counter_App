@@ -3,8 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 56;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		C9C9236D2D70419100961D42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C923622D70419100961D42 /* AppDelegate.swift */; };
+		C9C9236E2D70419100961D42 /* CounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C923642D70419100961D42 /* CounterModel.swift */; };
+		C9C9236F2D70419100961D42 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C923652D70419100961D42 /* CounterView.swift */; };
+		C9C923702D70419100961D42 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C923662D70419100961D42 /* CounterViewController.swift */; };
+		C9C923712D70419100961D42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9236A2D70419100961D42 /* SceneDelegate.swift */; };
+		C9C923722D70419100961D42 /* UIButton++.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9236B2D70419100961D42 /* UIButton++.swift */; };
+		C9C923732D70419100961D42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9C923632D70419100961D42 /* Assets.xcassets */; };
+		C9C923752D70419100961D42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9C923692D70419100961D42 /* LaunchScreen.storyboard */; };
+		C9C923782D70419600961D42 /* CounterAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C923762D70419600961D42 /* CounterAppTests.swift */; };
+		C9C9237C2D70419A00961D42 /* CounterAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C923792D70419A00961D42 /* CounterAppUITests.swift */; };
+		C9C9237D2D70419A00961D42 /* CounterAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9237A2D70419A00961D42 /* CounterAppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		C9720CCF2D66F2630008CF34 /* PBXContainerItemProxy */ = {
@@ -27,38 +41,19 @@
 		C9720CB82D66F25F0008CF34 /* CounterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CounterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9720CCE2D66F2630008CF34 /* CounterAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9720CD82D66F2630008CF34 /* CounterAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9C923622D70419100961D42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C9C923632D70419100961D42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9C923642D70419100961D42 /* CounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterModel.swift; sourceTree = "<group>"; };
+		C9C923652D70419100961D42 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		C9C923662D70419100961D42 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
+		C9C923672D70419100961D42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9C923682D70419100961D42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9C9236A2D70419100961D42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C9C9236B2D70419100961D42 /* UIButton++.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton++.swift"; sourceTree = "<group>"; };
+		C9C923762D70419600961D42 /* CounterAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterAppTests.swift; sourceTree = "<group>"; };
+		C9C923792D70419A00961D42 /* CounterAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterAppUITests.swift; sourceTree = "<group>"; };
+		C9C9237A2D70419A00961D42 /* CounterAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		C9720CE02D66F2630008CF34 /* Exceptions for "CounterApp" folder in "CounterApp" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = C9720CB72D66F25F0008CF34 /* CounterApp */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		C9720CBA2D66F25F0008CF34 /* CounterApp */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				C9720CE02D66F2630008CF34 /* Exceptions for "CounterApp" folder in "CounterApp" target */,
-			);
-			path = CounterApp;
-			sourceTree = "<group>";
-		};
-		C9720CD12D66F2630008CF34 /* CounterAppTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CounterAppTests;
-			sourceTree = "<group>";
-		};
-		C9720CDB2D66F2630008CF34 /* CounterAppUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CounterAppUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C9720CB52D66F25F0008CF34 /* Frameworks */ = {
@@ -88,9 +83,9 @@
 		C9720CAF2D66F25F0008CF34 = {
 			isa = PBXGroup;
 			children = (
-				C9720CBA2D66F25F0008CF34 /* CounterApp */,
-				C9720CD12D66F2630008CF34 /* CounterAppTests */,
-				C9720CDB2D66F2630008CF34 /* CounterAppUITests */,
+				C9C9236C2D70419100961D42 /* CounterApp */,
+				C9C923772D70419600961D42 /* CounterAppTests */,
+				C9C9237B2D70419A00961D42 /* CounterAppUITests */,
 				C9720CB92D66F25F0008CF34 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +98,39 @@
 				C9720CD82D66F2630008CF34 /* CounterAppUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		C9C9236C2D70419100961D42 /* CounterApp */ = {
+			isa = PBXGroup;
+			children = (
+				C9C923622D70419100961D42 /* AppDelegate.swift */,
+				C9C923632D70419100961D42 /* Assets.xcassets */,
+				C9C923642D70419100961D42 /* CounterModel.swift */,
+				C9C923652D70419100961D42 /* CounterView.swift */,
+				C9C923662D70419100961D42 /* CounterViewController.swift */,
+				C9C923672D70419100961D42 /* Info.plist */,
+				C9C923692D70419100961D42 /* LaunchScreen.storyboard */,
+				C9C9236A2D70419100961D42 /* SceneDelegate.swift */,
+				C9C9236B2D70419100961D42 /* UIButton++.swift */,
+			);
+			path = CounterApp;
+			sourceTree = "<group>";
+		};
+		C9C923772D70419600961D42 /* CounterAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9C923762D70419600961D42 /* CounterAppTests.swift */,
+			);
+			path = CounterAppTests;
+			sourceTree = "<group>";
+		};
+		C9C9237B2D70419A00961D42 /* CounterAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C9C923792D70419A00961D42 /* CounterAppUITests.swift */,
+				C9C9237A2D70419A00961D42 /* CounterAppUITestsLaunchTests.swift */,
+			);
+			path = CounterAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,9 +147,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				C9720CBA2D66F25F0008CF34 /* CounterApp */,
 			);
 			name = CounterApp;
 			packageProductDependencies = (
@@ -143,9 +168,6 @@
 			dependencies = (
 				C9720CD02D66F2630008CF34 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				C9720CD12D66F2630008CF34 /* CounterAppTests */,
-			);
 			name = CounterAppTests;
 			packageProductDependencies = (
 			);
@@ -165,9 +187,6 @@
 			);
 			dependencies = (
 				C9720CDA2D66F2630008CF34 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				C9720CDB2D66F2630008CF34 /* CounterAppUITests */,
 			);
 			name = CounterAppUITests;
 			packageProductDependencies = (
@@ -207,8 +226,6 @@
 				Base,
 			);
 			mainGroup = C9720CAF2D66F25F0008CF34;
-			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = C9720CB92D66F25F0008CF34 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -225,6 +242,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C923732D70419100961D42 /* Assets.xcassets in Resources */,
+				C9C923752D70419100961D42 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C9236D2D70419100961D42 /* AppDelegate.swift in Sources */,
+				C9C9236E2D70419100961D42 /* CounterModel.swift in Sources */,
+				C9C9236F2D70419100961D42 /* CounterView.swift in Sources */,
+				C9C923702D70419100961D42 /* CounterViewController.swift in Sources */,
+				C9C923712D70419100961D42 /* SceneDelegate.swift in Sources */,
+				C9C923722D70419100961D42 /* UIButton++.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C923782D70419600961D42 /* CounterAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +289,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C9237C2D70419A00961D42 /* CounterAppUITests.swift in Sources */,
+				C9C9237D2D70419A00961D42 /* CounterAppUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +308,17 @@
 			targetProxy = C9720CD92D66F2630008CF34 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C9C923692D70419100961D42 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9C923682D70419100961D42 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C9720CE22D66F2630008CF34 /* Debug */ = {
