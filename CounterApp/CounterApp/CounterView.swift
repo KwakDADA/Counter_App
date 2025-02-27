@@ -77,3 +77,9 @@ final class CounterView: UIView {
         button.isEnabled = valid
     }
 }
+
+enum CounterButtonTitle {
+    static let up = "🔺"
+    static let down = "🔻"
+    static let reset = "🔄"
+}

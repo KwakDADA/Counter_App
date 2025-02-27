@@ -11,7 +11,7 @@
 		2A66E6C015ADBA3E5D3CBF41 /* Pods_CounterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B7148DF654F61DC81082D0 /* Pods_CounterApp.framework */; };
 		3A307A6DDA0426AB866EB2A6 /* Pods_CounterAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5D6BCEA273B53390B0E6A9E /* Pods_CounterAppTests.framework */; };
 		C9C9236D2D70419100961D42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C923622D70419100961D42 /* AppDelegate.swift */; };
-		C9C9236E2D70419100961D42 /* CounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C923642D70419100961D42 /* CounterModel.swift */; };
+		C9C9236E2D70419100961D42 /* CounterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C923642D70419100961D42 /* CounterViewModel.swift */; };
 		C9C9236F2D70419100961D42 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C923652D70419100961D42 /* CounterView.swift */; };
 		C9C923702D70419100961D42 /* CounterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C923662D70419100961D42 /* CounterViewController.swift */; };
 		C9C923712D70419100961D42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C9236A2D70419100961D42 /* SceneDelegate.swift */; };
@@ -51,7 +51,7 @@
 		C9720CD82D66F2630008CF34 /* CounterAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CounterAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9C923622D70419100961D42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9C923632D70419100961D42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C9C923642D70419100961D42 /* CounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterModel.swift; sourceTree = "<group>"; };
+		C9C923642D70419100961D42 /* CounterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewModel.swift; sourceTree = "<group>"; };
 		C9C923652D70419100961D42 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		C9C923662D70419100961D42 /* CounterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterViewController.swift; sourceTree = "<group>"; };
 		C9C923672D70419100961D42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -105,7 +105,6 @@
 				F6962DB60AEF75202B70D660 /* Pods-CounterAppTests.debug.xcconfig */,
 				5BF61F4782956B8E5BA3434F /* Pods-CounterAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -136,7 +135,7 @@
 			children = (
 				C9C923622D70419100961D42 /* AppDelegate.swift */,
 				C9C923632D70419100961D42 /* Assets.xcassets */,
-				C9C923642D70419100961D42 /* CounterModel.swift */,
+				C9C923642D70419100961D42 /* CounterViewModel.swift */,
 				C9C923652D70419100961D42 /* CounterView.swift */,
 				C9C923662D70419100961D42 /* CounterViewController.swift */,
 				C9C923672D70419100961D42 /* Info.plist */,
@@ -259,6 +258,7 @@
 				};
 			};
 			buildConfigurationList = C9720CB32D66F25F0008CF34 /* Build configuration list for PBXProject "CounterApp" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -412,7 +412,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9C9236D2D70419100961D42 /* AppDelegate.swift in Sources */,
-				C9C9236E2D70419100961D42 /* CounterModel.swift in Sources */,
+				C9C9236E2D70419100961D42 /* CounterViewModel.swift in Sources */,
 				C9C9236F2D70419100961D42 /* CounterView.swift in Sources */,
 				C9C923702D70419100961D42 /* CounterViewController.swift in Sources */,
 				C9C923712D70419100961D42 /* SceneDelegate.swift in Sources */,
@@ -557,7 +557,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -620,7 +620,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

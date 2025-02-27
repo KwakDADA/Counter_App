@@ -5,12 +5,13 @@
 //  Created by 곽다은 on 2/20/25.
 //
 
-import UIKit
+import RxSwift
+import RxCocoa
 
 final class CounterViewController: UIViewController {
     
-    var counter: Counter = .init()
-    
+    private let disposeBag: DisposeBag = .init()
+    private let viewModel: CounterViewModel = .init()
     private let counterView = CounterView()
     
     override func loadView() {
@@ -21,39 +22,41 @@ final class CounterViewController: UIViewController {
         super.viewDidLoad()
         
         setUI()
-        setAction()
+        bindActions()
+        bindViewModelStates()
     }
 
     private func setUI() {
         view.backgroundColor = .white
-        updateUI()
     }
     
-    private func setAction() {
-        counterView.upButton.addTarget(self, action: #selector(didTapUpButton), for: .touchUpInside)
-        counterView.downButton.addTarget(self, action: #selector(didTapDownButton), for: .touchUpInside)
-        counterView.resetButton.addTarget(self, action: #selector(didTapResetButton), for: .touchUpInside)
+    private func bindActions() {
+        counterView.upButton.rx.tap
+            .asDriver()
+            .drive(with: self) { owner, _ in owner.viewModel.increase()}
+            .disposed(by: disposeBag)
+        
+        counterView.downButton.rx.tap
+            .asDriver()
+            .drive(with: self) { owner, _ in owner.viewModel.decrease() }
+            .disposed(by: disposeBag)
+        
+        counterView.resetButton.rx.tap
+            .asDriver()
+            .drive(with: self) { owner, _ in owner.viewModel.reset() }
+            .disposed(by: disposeBag)
     }
     
-    private func updateUI() {
-        counterView.updateCountLabel(with: counter.value)
-        counterView.validateButton(button: counterView.upButton, counter.value < counter.maxValue)
-        counterView.validateButton(button: counterView.downButton, counter.value > counter.minValue)
-    }
-    
-    @objc func didTapUpButton() {
-        counter.increase()
-        updateUI()
-    }
-    
-    @objc func didTapDownButton() {
-        counter.decrease()
-        updateUI()
-    }
-    
-    @objc func didTapResetButton() {
-        counter.reset()
-        updateUI()
+    private func bindViewModelStates() {
+        viewModel.counter
+            .asDriver()
+            .drive(with: self) { owner, value in
+                let view = owner.counterView
+                view.updateCountLabel(with: value)
+                view.validateButton(button: view.upButton, owner.viewModel.canIncrease)
+                view.validateButton(button: view.downButton, owner.viewModel.canDecrease)
+            }
+            .disposed(by: disposeBag)
     }
 }
 
